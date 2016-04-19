@@ -5,6 +5,7 @@ outputs another numpy matrix with the same shape.
 """
 import numpy as np
 import random
+import copy
 
 class NoiseModel(object):
 
@@ -20,7 +21,7 @@ class NoiseModel(object):
   features of decreasing importance
   """
   def __init__(self,
-               shape, 
+               shape=(1,1), 
                probability=0,
                feature_importance=[]):
     
@@ -76,6 +77,29 @@ class NoiseModel(object):
   """
   def corrupt(self, X):
   	raise NotImplementedError("Please implement this method")
+
+  """
+  This method allows for dynamic reshaping of the noise model
+  """
+  def reshape(self, shape, feature_importance=[]):
+    ret = copy.deepcopy(self)
+    ret.shape = shape
+    if feature_importance == []:
+      ret.feature_importance = range(0,shape[1])
+    else:
+      ret.feature_importance = feature_importance
+
+    #check to see if the shape provided is valid
+    if len(shape) != 2 or \
+       shape[0] <= 0 or \
+       shape[1] <= 0:
+       raise ValueError("Invalid shape: " + str(shape))
+
+    if sorted(ret.feature_importance) != range(0,shape[1]):
+    	raise ValueError("Invalid feature_importance: " + str(ret.feature_importance))
+    return ret
+
+
 
 
 
