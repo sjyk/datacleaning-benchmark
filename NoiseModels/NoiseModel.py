@@ -66,6 +66,7 @@ class NoiseModel(object):
     all_indices = range(0,N)
     random.shuffle(all_indices)
     tocorrupt = all_indices[0:Ns]
+    self.argselect = tocorrupt
     clean = all_indices[Ns:]
     
     return np.vstack((self.corrupt(X[tocorrupt,:]), X[clean,:]))

@@ -51,6 +51,30 @@ This model implements noise that resembles entity resolution noise
 """
 class ERNoiseModel(NoiseModel.NoiseModel):
   """
-  TODO
+  Applies ER Noise to a subset of ks features
+  p is the error rate
   """
+  def __init__(self, 
+               shape, 
+               probability=0,
+               feature_importance=[],
+               ks= [],
+               z = 3):
+
+    super(ERNoiseModel, self).__init__(shape, 
+    	                             probability, 
+    	                             feature_importance)
+    self.ks = ks
+    self.z = z
+
+  def corrupt(self, X):
+    Ns = numpy.shape(X)[0]
+    ps = numpy.shape(X)[1]
+    for i in range(0, Ns):
+      ern = numpy.random.zipf(self.z,(1,1))
+      eri = numpy.random.choice(range(0,Ns),ern)
+      for j in eri:
+      	X[j,self.ks] = X[i,self.ks]
+    return X
+
 
