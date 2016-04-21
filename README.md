@@ -17,3 +17,9 @@ What to evaluate
 * Chris Re's stuff
 * Active clean
 * Normal models
+
+Benchmarks to look at
+
+* OLTPBench
+* LinearRoad
+* Ask Mike
