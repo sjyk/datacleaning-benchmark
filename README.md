@@ -1,5 +1,10 @@
 # datacleaning-benchmark
 
+What's missing
+
+* Noise models, model eval
+* Base Data representation and how to corrupt it
+
 
 Noise
 
@@ -17,6 +22,11 @@ What to evaluate
 * Chris Re's stuff
 * Active clean
 * Normal models
+
+
+How to use our benchmark in existing data cleaning system/exepreiment setups
+
+* walk through
 
 Benchmarks to look at
 
