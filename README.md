@@ -1,5 +1,13 @@
 # datacleaning-benchmark
 
+Datasets we have
+
+* police union contributions
+* stock market dataset from Luna
+* Jun Yang's politican voting data
+* movies dataset
+* propublica
+
 What's missing
 
 * Noise models, model eval
@@ -9,11 +17,12 @@ What's missing
 Noise
 
 * Constraint based noise
+  * Start with simple functional dependency constraints
   * white does an input file of constraints look like
   * given a constraint how to generate errors
   * gvine a set of constraints, how to generate errors
 * Constraint based noise + synthetic noise
-* Graphics of celaning opertations and applying subpaths in tnhe graph
+* Graph of celaning opertations and applying subpaths in tnhe graph
 * Samples of ground truth
 
 What to evaluate
@@ -33,3 +42,8 @@ Benchmarks to look at
 * OLTPBench
 * LinearRoad
 * Ask Mike
+
+
+Wu:
+
+* does test.py api look sane 
