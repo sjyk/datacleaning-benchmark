@@ -1,5 +1,9 @@
 # datacleaning-benchmark
 
+Requires
+*numpy
+*usaddress
+
 Datasets we have
 
 * police union contributions

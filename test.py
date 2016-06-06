@@ -19,11 +19,11 @@ clf.fit(X_train, y_train)
 print clf.score(X_test, y_test) 
 """
 
-from CorruptionModels.TypoCorruptionModel import TypoCorruptionModel
+from CorruptionModels.AddressCorruptionModel import AddressCorruptionModel
 
-a = [["I saw a dog with you"], ["b"], ["l"]]
+a = [["123 alphabet rd Berkeley, CA 94720"], ["b"], ["l"]]
 
-g = TypoCorruptionModel([0],0.5, 0.5)
+g = AddressCorruptionModel([0],0.5, 0.5)
 print g.apply(a)
 
 

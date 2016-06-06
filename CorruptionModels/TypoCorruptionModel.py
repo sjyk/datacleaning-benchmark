@@ -50,6 +50,7 @@ class TypoCorruptionModel(CorruptionModel.CorruptionModel):
         rtn.append(x[i])
     return rtn
 
+#fix cases
   def typoCol(self, x):
     result = []
     for word in x.split():
