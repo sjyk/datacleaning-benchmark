@@ -20,6 +20,7 @@ print clf.score(X_test, y_test)
 """
 
 from CorruptionModels.AddressCorruptionModel import AddressCorruptionModel
+from CorruptionModels.TypoCorruptionModel import TypoCorruptionModel
 
 a = [["123 alphabet rd Berkeley, CA 94720"], ["b"], ["l"]]
 

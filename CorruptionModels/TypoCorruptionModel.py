@@ -60,4 +60,4 @@ class TypoCorruptionModel(CorruptionModel.CorruptionModel):
         typo = random.choice(self.lookup_index[word.lower()])
         result.append(typo)
       #if not in skip
-    return result
+    return ' '.join(result)
