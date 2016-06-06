@@ -1,5 +1,7 @@
 #!/usr/bin/python
 #
+#
+"""
 from NoiseModels.RandomNoise import GaussianNoiseModel, ZipfNoiseModel, MissingNoiseModel 
 from NoiseModels.SystematicNoise import MissingSystematicNoiseModel, ERNoiseModel
 import numpy
@@ -15,5 +17,16 @@ X_train, X_test, y_train, y_test = generateDirtyTrain(d['data'], d['target'], g,
 clf = svm.SVC()
 clf.fit(X_train, y_train)  
 print clf.score(X_test, y_test) 
+"""
+
+from CorruptionModels.TypoCorruptionModel import TypoCorruptionModel
+
+a = [["I saw a dog with you"], ["b"], ["l"]]
+
+g = TypoCorruptionModel([0],0.5, 0.5)
+print g.apply(a)
+
+
+
 
 
