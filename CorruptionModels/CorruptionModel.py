@@ -55,9 +55,9 @@ class CorruptionModel(object):
         dirty.append(X[i])
 
     result = self.corrupt(dirty)
-    result .extend(clean)
+    result.extend(clean)
 
-    return  result 
+    return result 
 
   """
   This method should be implemented by sub-classes

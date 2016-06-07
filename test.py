@@ -20,11 +20,11 @@ print clf.score(X_test, y_test)
 """
 
 from CorruptionModels.AddressCorruptionModel import AddressCorruptionModel
-from CorruptionModels.TypoCorruptionModel import TypoCorruptionModel
+from CorruptionModels.EscapeCorruptionModel import EscapeCorruptionModel
 
-a = [["123 alphabet rd Berkeley, CA 94720"], ["b"], ["l"]]
+a = [["United States", "a", "b"], ["UC Berkeley", "a"]]
 
-g = AddressCorruptionModel([0],0.5, 0.5)
+g = EscapeCorruptionModel([0],0.5)
 print g.apply(a)
 
 
