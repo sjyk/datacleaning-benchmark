@@ -17,11 +17,11 @@ def generateDirtyTrain(X,
   	                                                  test_size=test_size)
   if noisemodelX != None:
   	nmx = noisemodelX.reshape(np.shape(X_train))
-  	X_train = nmx.apply(X_train)
+  	X_train = nmx.apply(X_train)[0]
 
   if noisemodely != None:
   	nmx = noisemodely.reshape(np.shape(y_train))
-  	y_train = nmx.apply(y_train)
+  	y_train = nmx.apply(y_train)[0]
 
   return X_train, X_test, y_train, y_test
 

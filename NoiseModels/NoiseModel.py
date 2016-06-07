@@ -70,7 +70,7 @@ class NoiseModel(object):
     self.argselect = tocorrupt
     clean = all_indices[Ns:]
     
-    return np.vstack((self.corrupt(X[tocorrupt,:]), X[clean,:]))
+    return (np.vstack((self.corrupt(X[tocorrupt,:]), X[clean,:])), np.vstack((X[tocorrupt,:], X[clean,:])))
 
   """
   This method should be implemented by sub-classes

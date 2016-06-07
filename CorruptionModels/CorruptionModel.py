@@ -57,7 +57,10 @@ class CorruptionModel(object):
     result = self.corrupt(dirty)
     result.extend(clean)
 
-    return result 
+    old = dirty
+    old.extend(clean)
+
+    return (result, old) 
 
   """
   This method should be implemented by sub-classes
