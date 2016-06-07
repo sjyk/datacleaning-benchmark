@@ -20,8 +20,13 @@ print clf.score(X_test, y_test)
 """
 
 from Utils.Utils import *
+from NoiseModels.RandomNoise import GaussianNoiseModel, ZipfNoiseModel, MissingNoiseModel 
+from NoiseModels.SystematicNoise import MissingSystematicNoiseModel, ERNoiseModel
 from CorruptionModels.AddressCorruptionModel import AddressCorruptionModel
 from CorruptionModels.EscapeCorruptionModel import EscapeCorruptionModel
+from CorruptionModels.ERCorruptionModel import ERCorruptionModel
+from CorruptionModels.CSVCorruptionModel import CSVCorruptionModel
+from CorruptionModels.TypoCorruptionModel import TypoCorruptionModel
 
 a = [["United States", "a", "b"], ["UC Berkeley", "a"]]
 
