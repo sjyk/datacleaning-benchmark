@@ -19,13 +19,20 @@ clf.fit(X_train, y_train)
 print clf.score(X_test, y_test) 
 """
 
+from Utils.Utils import *
 from CorruptionModels.AddressCorruptionModel import AddressCorruptionModel
 from CorruptionModels.EscapeCorruptionModel import EscapeCorruptionModel
 
 a = [["United States", "a", "b"], ["UC Berkeley", "a"]]
 
 g = EscapeCorruptionModel([0],0.5)
-print g.apply(a)
+
+
+@inject(g)
+def myETL(data):
+	return data
+
+print myETL(a)
 
 
 
