@@ -19,6 +19,7 @@ clf.fit(X_train, y_train)
 print clf.score(X_test, y_test) 
 """
 
+"""
 from Utils.Utils import *
 from NoiseModels.RandomNoise import GaussianNoiseModel, ZipfNoiseModel, MissingNoiseModel 
 from NoiseModels.SystematicNoise import MissingSystematicNoiseModel, ERNoiseModel
@@ -38,6 +39,7 @@ def myETL(data):
 	return data
 
 print myETL(a)
+"""
 
 
 
