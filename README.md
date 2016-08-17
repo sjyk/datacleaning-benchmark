@@ -1,6 +1,22 @@
-# datacleaning-benchmark
+# Installation and Usage
+
+Install
+
+        pip install cleaningbenchmark
+
+        # or
+  
+        python setup.py install
+
+Test it
+
+        testcleaningbenchmark.py
+
+
+# What is this?
 
 Requires
+
 *numpy
 *usaddress
 
