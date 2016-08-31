@@ -19,7 +19,9 @@ def test1():
   d = sklearn.datasets.load_digits(n_class=2)
   print d['data'], d['target']
 
+  # Create a model that injects zipfian noise
   g = ZipfNoiseModel(numpy.shape(d['data']),0.1,[], z=4)
+
   X_train, X_test, y_train, y_test = generateDirtyTrain(d['data'], d['target'], g,None)
   clf = svm.SVC()
   clf.fit(X_train, y_train)  
